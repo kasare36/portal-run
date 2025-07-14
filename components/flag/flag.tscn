@@ -17,7 +17,7 @@ position = Vector2(-34, 36)
 scale = Vector2(1.95281, 3.4181)
 sprite_frames = ExtResource("2_l6hhd")
 animation = &"up"
-frame_progress = 0.75096
+frame_progress = 0.176389
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-32, 0)
