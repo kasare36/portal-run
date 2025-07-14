@@ -162,31 +162,287 @@ one_way = true
 fall_time = 2.0
 
 [node name="Platform5" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(-1152, 0)
+position = Vector2(-1115, -202)
 width = 2
 one_way = true
 fall_time = 2.0
 
 [node name="Platform6" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(-832, 0)
+position = Vector2(-648, -423)
 width = 2
 one_way = true
 fall_time = 2.0
 
 [node name="Platform7" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(-512, 0)
+position = Vector2(-181, -625)
 width = 2
 one_way = true
 fall_time = 2.0
 
 [node name="Platform8" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(-192, 0)
+position = Vector2(323, -832)
 width = 2
 one_way = true
 fall_time = 2.0
 
 [node name="Platform9" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(128, 0)
+position = Vector2(849, -1066)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform10" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(1244, -1254)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform11" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(1648, -1461)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform12" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(2126, -1622)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform13" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(2604, -1650)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform14" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(2912, -1365)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform15" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3280, -984)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform16" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3698, -635)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform17" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(4153, -221)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform18" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3785, 160)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform19" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3436, 445)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform20" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3110, 771)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform21" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(2843, 1038)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform22" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3275, 1337)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform23" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(2848, 1663)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform24" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(2848, 1663)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform25" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3298, 2026)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform26" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3831, 2008)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform27" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(4369, 2022)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform28" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(4773, 1788)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform29" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(5131, 1549)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform30" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(5485, 1315)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform31" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(5848, 1071)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform32" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(6252, 860)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform33" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(6624, 612)
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform34" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(7005, 474)
+rotation = 0.0839307
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform35" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(7340, 309)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform36" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(7340, 309)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform37" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(6931, 42)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform38" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(6522, -183)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform39" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(6154, -358)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform40" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(5731, -611)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform41" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(5152, -864)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform42" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(4619, -1218)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform43" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(4155, -1498)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform44" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3792, -1686)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform45" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3447, -1874)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform46" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3447, -1874)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform47" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(3061, -2076)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform48" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(2698, -2251)
+rotation = -0.0114209
+width = 2
+one_way = true
+fall_time = 2.0
+
+[node name="Platform49" parent="Platforms" instance=ExtResource("4_gd51l")]
+position = Vector2(2349, -2453)
+rotation = -0.567107
 width = 2
 one_way = true
 fall_time = 2.0
