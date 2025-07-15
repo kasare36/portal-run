@@ -1,3 +1,37 @@
+# Portal-Run
+
+**Portal-Run** is a modded 2D platformer built with the Godot Engine. It expands on a base platformer project by adding custom levels, mechanics, and visuals.
+
+## 🎮 Features
+
+- Classic platforming gameplay
+- Portal mechanics and custom mods
+- Built in Godot Engine (v4)
+
+
+## 🚀 Getting Started
+
+### Requirements
+
+- [Godot 4.x](https://godotengine.org/)
+
+### Run the Game
+
+```bash
+git clone https://github.com/kasare36/portal-run.git
+cd portal-run
+Open portal-run in Godot.
+```
+
+Press F5 or click Play.
+
+
+
+##📄 License
+No license applied.
+
+---
+
 # Moddable Platformer
 
 This mini moddable game project by [Endless OS
