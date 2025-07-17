@@ -17,11 +17,11 @@ extends Node
 ## Should you win the game by reaching a flag?[br]
 ## If the option to win by collecting coins is also set, then it will only be
 ## possible to win by collecting enough coins and then reaching a flag.
-@export var win_by_reaching_flag: bool = false
+@export var win_by_reaching_flag: bool = true
 
 ## Win by reaching a specific flag. Otherwise, the player can win by reaching
 ## any flag placed in the scene.
-@export var flag_to_win: Flag = null
+@export var flag_to_win: Flag
 
 @export_group("Challenges")
 ## You lose if this time runs out.
@@ -29,7 +29,7 @@ extends Node
 @export_range(0, 60, 0.9, "or_greater", "suffix:s") var time_limit: int = 0
 
 ## How many lives does the player have?
-@export_range(1, 9) var lives: int = 3:
+@export_range(1, 9) var lives: int = 1:
 	set = _set_lives
 
 @export_group("World Properties")

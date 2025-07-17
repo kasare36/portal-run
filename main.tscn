@@ -18,7 +18,7 @@
 
 [node name="GameLogic" parent="." instance=ExtResource("3_xbkvd")]
 win_by_collecting_coins = true
-win_by_reaching_flag = true
+time_limit = 360
 
 [node name="Background" parent="." instance=ExtResource("2_tb5a2")]
 scale = Vector2(10, 10)
