@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bi5370kgl6xcs" path="res://scripts/hud.gd" id="1_8msyy"]
 [ext_resource type="Texture2D" uid="uid://bwt5tfdwi6444" path="res://assets/input-prompts/keyboard_arrow_left.svg" id="2_btdwd"]
-[ext_resource type="Texture2D" uid="uid://d3um1i1lgu153" path="res://assets/heart.png" id="2_yyptq"]
 [ext_resource type="Texture2D" uid="uid://c6ic03u2yvnk6" path="res://assets/controls/flatLightLeft.png" id="3_cxgb6"]
 [ext_resource type="Texture2D" uid="uid://bvblole4tllwp" path="res://assets/input-prompts/keyboard_arrow_up.svg" id="3_dm1pp"]
 [ext_resource type="Texture2D" uid="uid://ejrlpu5caxit" path="res://assets/input-prompts/keyboard_arrow_right.svg" id="4_pk5l0"]
@@ -17,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cunoxrlkbl8f1" path="res://assets/input-prompts/steamdeck_button_a.svg" id="7_cae44"]
 [ext_resource type="Texture2D" uid="uid://djskjyoqjltro" path="res://assets/input-prompts/keyboard_d.svg" id="7_idqt6"]
 [ext_resource type="Texture2D" uid="uid://vujn5y4v732w" path="res://assets/controls/flatDarkA.png" id="8_me7no"]
+[ext_resource type="Texture2D" uid="uid://bee3tkygni1u8" path="res://components/player/heart.png" id="11_615i1"]
 
 [sub_resource type="Theme" id="Theme_0yvta"]
 default_font_size = 64
@@ -217,13 +217,12 @@ text = "0"
 
 [node name="Lives" type="TextureRect" parent="."]
 unique_name_in_owner = true
-offset_left = 60.0
-offset_top = 220.0
-offset_right = 124.0
-offset_bottom = 284.0
-texture = ExtResource("2_yyptq")
-expand_mode = 1
-stretch_mode = 1
+offset_left = 32.0
+offset_top = 202.0
+offset_right = 387.0
+offset_bottom = 514.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_615i1")
 
 [node name="MovePlayerLeft" type="TouchScreenButton" parent="."]
 modulate = Color(1, 1, 1, 0.74902)
