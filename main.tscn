@@ -714,6 +714,7 @@ collision_layer = 1
 collision_mask = 7
 floor_stop_on_slope = false
 floor_constant_speed = false
+player = 2
 sprite_frames = ExtResource("9_qmofe")
 speed = 620.0
 double_jump = true
