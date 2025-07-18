@@ -275,7 +275,7 @@ tint = Color(1, 1, 0, 1)
 
 [node name="Coin43" parent="Coins" instance=ExtResource("5_u7hr5")]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(65586, -3331)
+position = Vector2(65624, -3331)
 tint = Color(1, 1, 0, 1)
 
 [node name="Coin44" parent="Coins" instance=ExtResource("5_u7hr5")]
@@ -1688,23 +1688,23 @@ rotation = 0.652887
 [node name="MakeshiftPortal" type="Node2D" parent="."]
 
 [node name="Portal" type="Sprite2D" parent="MakeshiftPortal"]
-position = Vector2(11720, -4752)
-scale = Vector2(3.84, 3.52)
+position = Vector2(11736, -4725)
+scale = Vector2(4.45, 4.1)
 texture = ExtResource("17_82xsv")
 
 [node name="Portal2" type="Sprite2D" parent="MakeshiftPortal"]
-position = Vector2(20682, -4785)
-scale = Vector2(3.84, 3.52)
+position = Vector2(20672, -4736)
+scale = Vector2(5.22, 4.49)
 texture = ExtResource("17_82xsv")
 
 [node name="Portal3" type="Sprite2D" parent="MakeshiftPortal"]
-position = Vector2(54487, -6591)
-scale = Vector2(5.91001, 5.15)
+position = Vector2(54423, -6586)
+scale = Vector2(7.60498, 6.225)
 texture = ExtResource("17_82xsv")
 
 [node name="Portal4" type="Sprite2D" parent="MakeshiftPortal"]
-position = Vector2(64030, -6618)
-scale = Vector2(5.91001, 5.15)
+position = Vector2(64051.3, -6579.25)
+scale = Vector2(6.33502, 5.925)
 texture = ExtResource("17_82xsv")
 
 [node name="Backgrounds" type="Node2D" parent="."]
@@ -1722,6 +1722,7 @@ position = Vector2(10777, -4599)
 rotation = -3.14126
 scale = Vector2(1.85478, 3.94557)
 texture = ExtResource("15_yaehf")
+metadata/_edit_lock_ = true
 
 [node name="8" type="Sprite2D" parent="Backgrounds"]
 z_index = -200
@@ -1740,12 +1741,15 @@ z_index = -200
 position = Vector2(19244, -4624)
 scale = Vector2(2.9768, 7.64)
 texture = ExtResource("16_074og")
+metadata/_edit_lock_ = true
 
 [node name="Gradient2" type="Sprite2D" parent="Backgrounds"]
 z_index = -200
 position = Vector2(21313, -4626)
 scale = Vector2(0.992268, 3.94216)
 texture = ExtResource("17_cegan")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Gradient3" type="Sprite2D" parent="Backgrounds"]
 z_index = -200
@@ -1753,6 +1757,7 @@ position = Vector2(52143, -6634)
 rotation = 3.14159
 scale = Vector2(4.49054, 11.5461)
 texture = ExtResource("17_cegan")
+metadata/_edit_lock_ = true
 
 [node name="11" type="Sprite2D" parent="Backgrounds"]
 z_index = -200
@@ -1772,7 +1777,27 @@ z_index = -200
 position = Vector2(64430, -6906)
 scale = Vector2(0.895625, 5.7139)
 texture = ExtResource("19_82xsv")
+metadata/_edit_lock_ = true
 
 [node name="Down" type="Sprite2D" parent="."]
-position = Vector2(65467, -5890)
+position = Vector2(65636, -6289)
+scale = Vector2(0.880859, 0.658203)
 texture = ExtResource("20_getpj")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 65536.0
+offset_top = -6599.0
+offset_right = 65764.0
+offset_bottom = -6462.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.937255, 1, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Fall"
+uppercase = true
