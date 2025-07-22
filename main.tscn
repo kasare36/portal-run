@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://dhcpt1kt8cs0g"]
+[gd_scene load_steps=22 format=4 uid="uid://dhcpt1kt8cs0g"]
 
 [ext_resource type="PackedScene" uid="uid://8st4scqt06l8" path="res://components/player/player.tscn" id="2_7yl00"]
 [ext_resource type="PackedScene" uid="uid://jnrusvm3gric" path="res://spaces/background.tscn" id="2_tb5a2"]
@@ -21,11 +21,14 @@
 [ext_resource type="Texture2D" uid="uid://dk7ms7ukhf2ic" path="res://components/platform/gradient3.png" id="19_82xsv"]
 [ext_resource type="Texture2D" uid="uid://yg56tbb3gagl" path="res://components/platform/down.png" id="20_getpj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82xsv"]
+
 [node name="Main" type="Node2D"]
 
 [node name="GameLogic" parent="." instance=ExtResource("3_xbkvd")]
 win_by_collecting_coins = true
-time_limit = 360
+time_limit = 120
+lives = 3
 
 [node name="Background" parent="." instance=ExtResource("2_tb5a2")]
 scale = Vector2(10, 10)
@@ -399,6 +402,7 @@ position = Vector2(1920, -64)
 [node name="Platform" parent="Platforms" instance=ExtResource("4_gd51l")]
 position = Vector2(960, 320)
 width = 2
+one_way = true
 
 [node name="Platform5" parent="Platforms" instance=ExtResource("4_gd51l")]
 position = Vector2(-1115, -202)
@@ -1802,3 +1806,31 @@ theme_override_colors/font_shadow_color = Color(0.937255, 1, 0, 1)
 theme_override_font_sizes/font_size = 100
 text = "Fall"
 uppercase = true
+
+[node name="Checkpoint" type="Area2D" parent="."]
+position = Vector2(20682, -4838)
+scale = Vector2(19.8093, 22.88)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint"]
+shape = SubResource("RectangleShape2D_82xsv")
+
+[node name="Checkpoint3" type="Area2D" parent="."]
+position = Vector2(64076, -6627)
+scale = Vector2(19.8093, 22.88)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint3"]
+shape = SubResource("RectangleShape2D_82xsv")
+
+[node name="Checkpoint2" type="Area2D" parent="."]
+position = Vector2(524.004, 409)
+scale = Vector2(19.8093, 22.88)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint2"]
+shape = SubResource("RectangleShape2D_82xsv")
+
+[connection signal="body_entered" from="Checkpoint" to="Player" method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoint3" to="Player" method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoint2" to="Player" method="_on_checkpoint_body_entered"]
