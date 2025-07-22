@@ -2,16 +2,15 @@
 class_name Coin
 extends Area2D
 
-## Use this to change the texture of the coin.
 @export var texture: Texture2D = _initial_texture:
 	set = _set_texture
 
-## Use this to tint the texture of the coin a different color.
 @export var tint: Color = Color.WHITE:
 	set = _set_tint
 
 @onready var _sprite: Sprite2D = %Sprite2D
 @onready var _initial_texture: Texture2D = %Sprite2D.texture
+@onready var _coin_sound: AudioStreamPlayer2D = $CoinSound
 
 
 func _set_texture(new_texture: Texture2D):
@@ -37,4 +36,14 @@ func _ready():
 
 func _on_body_entered(_body):
 	Global.collect_coin()
+
+	# Instantly hide the coin so it looks like it disappears
+	visible = false
+	collision_layer = 0
+	collision_mask = 0
+
+	if _coin_sound:
+		_coin_sound.play()
+		await _coin_sound.finished
+
 	queue_free()
