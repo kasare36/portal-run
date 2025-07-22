@@ -111,11 +111,17 @@ func _jump():
 	velocity.y = jump_velocity
 	coyote_timer = 0
 	jump_buffer_timer = 0
+
+	if $JumpSound:
+		$JumpSound.stop() # In case it overlaps
+		$JumpSound.play()
+
 	if double_jump_armed:
 		double_jump_armed = false
 		_double_jump_particles.emitting = true
 	elif double_jump:
 		double_jump_armed = true
+
 
 
 func stomp():
