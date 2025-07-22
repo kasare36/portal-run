@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://dhcpt1kt8cs0g"]
+[gd_scene load_steps=23 format=4 uid="uid://dhcpt1kt8cs0g"]
 
 [ext_resource type="PackedScene" uid="uid://8st4scqt06l8" path="res://components/player/player.tscn" id="2_7yl00"]
 [ext_resource type="PackedScene" uid="uid://jnrusvm3gric" path="res://spaces/background.tscn" id="2_tb5a2"]
@@ -14,14 +14,16 @@
 [ext_resource type="PackedScene" uid="uid://beuisy5yrw0bq" path="res://components/flag/flag.tscn" id="12_dkbog"]
 [ext_resource type="Script" uid="uid://boqbxvbja884q" path="res://scripts/multiplayer_camera.gd" id="13_0d2mj"]
 [ext_resource type="Texture2D" uid="uid://byh6jyttgaxb2" path="res://spaces/1background.png" id="14_w48qg"]
+[ext_resource type="Texture2D" uid="uid://cp2jo8bicdlir" path="res://components/platform/portal1.png" id="15_ryguw"]
 [ext_resource type="Texture2D" uid="uid://d0ogd7q5gouqj" path="res://components/platform/gradient.png" id="15_yaehf"]
 [ext_resource type="Texture2D" uid="uid://cglwxmguhr8gq" path="res://components/platform/8.png" id="16_074og"]
-[ext_resource type="Texture2D" uid="uid://da364bx8rynr1" path="res://components/platform/portal.png" id="17_82xsv"]
+[ext_resource type="Texture2D" uid="uid://u7o72mmg4e31" path="res://components/platform/portal2.png" id="16_d13ii"]
 [ext_resource type="Texture2D" uid="uid://dfnn355cdooe2" path="res://components/platform/gradient2.png" id="17_cegan"]
 [ext_resource type="Texture2D" uid="uid://dk7ms7ukhf2ic" path="res://components/platform/gradient3.png" id="19_82xsv"]
 [ext_resource type="Texture2D" uid="uid://yg56tbb3gagl" path="res://components/platform/down.png" id="20_getpj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82xsv"]
+size = Vector2(6.76416, 9.92134)
 
 [node name="Main" type="Node2D"]
 
@@ -953,25 +955,60 @@ rotation = 0.652887
 
 [node name="MakeshiftPortal" type="Node2D" parent="."]
 
-[node name="Portal" type="Sprite2D" parent="MakeshiftPortal"]
-position = Vector2(11736, -4725)
-scale = Vector2(4.45, 4.1)
-texture = ExtResource("17_82xsv")
+[node name="Portal" type="Node2D" parent="MakeshiftPortal"]
 
-[node name="Portal2" type="Sprite2D" parent="MakeshiftPortal"]
-position = Vector2(20672, -4736)
-scale = Vector2(5.22, 4.49)
-texture = ExtResource("17_82xsv")
+[node name="Portal1" type="Sprite2D" parent="MakeshiftPortal/Portal"]
+z_index = -1
+position = Vector2(11543.2, -4725.87)
+scale = Vector2(2.66376, 3.23148)
+texture = ExtResource("15_ryguw")
 
-[node name="Portal3" type="Sprite2D" parent="MakeshiftPortal"]
-position = Vector2(54423, -6586)
-scale = Vector2(7.60498, 6.225)
-texture = ExtResource("17_82xsv")
+[node name="Portal5" type="Sprite2D" parent="MakeshiftPortal/Portal"]
+position = Vector2(11607, -4725)
+scale = Vector2(2.66376, 3.23148)
+texture = ExtResource("16_d13ii")
 
-[node name="Portal4" type="Sprite2D" parent="MakeshiftPortal"]
-position = Vector2(64051.3, -6579.25)
-scale = Vector2(6.33502, 5.925)
-texture = ExtResource("17_82xsv")
+[node name="Portal2" type="Node2D" parent="MakeshiftPortal"]
+position = Vector2(9093, -10)
+
+[node name="Portal1" type="Sprite2D" parent="MakeshiftPortal/Portal2"]
+z_index = -1
+position = Vector2(11543.2, -4725.87)
+scale = Vector2(2.66376, 3.23148)
+texture = ExtResource("15_ryguw")
+
+[node name="Portal5" type="Sprite2D" parent="MakeshiftPortal/Portal2"]
+position = Vector2(11607, -4725)
+scale = Vector2(2.66376, 3.23148)
+texture = ExtResource("16_d13ii")
+
+[node name="Portal3" type="Node2D" parent="MakeshiftPortal"]
+position = Vector2(43345, -1780)
+
+[node name="Portal1" type="Sprite2D" parent="MakeshiftPortal/Portal3"]
+z_index = -1
+position = Vector2(11543.2, -4725.87)
+scale = Vector2(2.66376, 3.23148)
+texture = ExtResource("15_ryguw")
+
+[node name="Portal5" type="Sprite2D" parent="MakeshiftPortal/Portal3"]
+position = Vector2(11607, -4725)
+scale = Vector2(2.66376, 3.23148)
+texture = ExtResource("16_d13ii")
+
+[node name="Portal4" type="Node2D" parent="MakeshiftPortal"]
+position = Vector2(52348, -1785)
+
+[node name="Portal1" type="Sprite2D" parent="MakeshiftPortal/Portal4"]
+z_index = -1
+position = Vector2(11543.2, -4725.87)
+scale = Vector2(2.66376, 3.23148)
+texture = ExtResource("15_ryguw")
+
+[node name="Portal5" type="Sprite2D" parent="MakeshiftPortal/Portal4"]
+position = Vector2(11607, -4725)
+scale = Vector2(2.66376, 3.23148)
+texture = ExtResource("16_d13ii")
 
 [node name="Backgrounds" type="Node2D" parent="."]
 
@@ -1075,6 +1112,16 @@ scale = Vector2(19.8093, 22.88)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint"]
+position = Vector2(-0.605776, 4.06469)
+shape = SubResource("RectangleShape2D_82xsv")
+
+[node name="Checkpoint5" type="Area2D" parent="."]
+position = Vector2(20682, -4838)
+scale = Vector2(19.8093, 22.88)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint5"]
+position = Vector2(-459.734, 4.72028)
 shape = SubResource("RectangleShape2D_82xsv")
 
 [node name="Checkpoint3" type="Area2D" parent="."]
@@ -1083,6 +1130,18 @@ scale = Vector2(19.8093, 22.88)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint3"]
+position = Vector2(-7.72388, 5.00436)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_82xsv")
+
+[node name="Checkpoint4" type="Area2D" parent="."]
+position = Vector2(55074, -6626)
+scale = Vector2(19.8093, 22.88)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint4"]
+position = Vector2(-7.72388, 5.00436)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_82xsv")
 
 [node name="Checkpoint2" type="Area2D" parent="."]
@@ -1094,5 +1153,7 @@ collision_layer = 2
 shape = SubResource("RectangleShape2D_82xsv")
 
 [connection signal="body_entered" from="Checkpoint" to="Player" method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoint5" to="Player" method="_on_checkpoint_body_entered"]
 [connection signal="body_entered" from="Checkpoint3" to="Player" method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoint4" to="Player" method="_on_checkpoint_body_entered"]
 [connection signal="body_entered" from="Checkpoint2" to="Player" method="_on_checkpoint_body_entered"]
