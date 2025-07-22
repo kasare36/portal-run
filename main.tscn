@@ -24,7 +24,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82xsv"]
 
 [node name="Main" type="Node2D"]
-position = Vector2(65, 0)
 
 [node name="GameLogic" parent="." instance=ExtResource("3_xbkvd")]
 win_by_collecting_coins = true
@@ -398,320 +397,370 @@ position = Vector2(83351, -7963)
 tint = Color(1, 1, 0, 1)
 
 [node name="Platforms" type="Node2D" parent="."]
-position = Vector2(1920, -64)
 
 [node name="Platform" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(960, 320)
+position = Vector2(2867, 266)
 width = 2
 one_way = true
+respawn_delay = null
 
 [node name="Platform5" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(-1115, -202)
+position = Vector2(792, -256)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform6" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(-648, -423)
+position = Vector2(1259, -477)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform7" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(-181, -625)
+position = Vector2(1726, -679)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform8" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(323, -832)
+position = Vector2(2230, -886)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform9" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(849, -1066)
+position = Vector2(2756, -1120)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform10" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(1244, -1254)
+position = Vector2(3151, -1308)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform11" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(1648, -1461)
+position = Vector2(3555, -1515)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform12" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(2126, -1622)
+position = Vector2(4033, -1676)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform12" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(65106, -433)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform13" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(65906, -781)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform14" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(66716, -1129)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform15" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(67485, -1490)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform16" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(68194, -1857)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform17" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(68862, -2205)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform18" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(70947, -2596)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform19" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(71874, -2585)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform20" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(72911, -2589)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform21" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(73921, -2570)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform22" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(74886, -2595)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform23" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(75917, -2600)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform24" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(76741, -2605)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform25" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(77535, -2630)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform26" parent="Platforms/Platform12" instance=ExtResource("4_gd51l")]
 position = Vector2(78430, -2640)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform13" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(2604, -1650)
+position = Vector2(4511, -1704)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform14" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(2912, -1365)
+position = Vector2(4819, -1419)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform15" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(3280, -984)
+position = Vector2(5187, -1038)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform16" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(3698, -635)
+position = Vector2(5605, -689)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform17" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(4153, -221)
+position = Vector2(6060, -275)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform18" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(3785, 160)
+position = Vector2(5692, 106)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform19" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(3436, 445)
+position = Vector2(5343, 391)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform20" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(3110, 771)
+position = Vector2(5017, 717)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform21" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(2843, 1038)
+position = Vector2(4750, 984)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform22" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(3534, 1324)
+position = Vector2(5441, 1270)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform30" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(5485, 1315)
+position = Vector2(7392, 1261)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform50" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(4440, 1321)
+position = Vector2(6347, 1267)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform32" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(6252, 860)
+position = Vector2(8159, 806)
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform36" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(7344, 426)
+position = Vector2(9251, 372)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform37" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(6931, 42)
+position = Vector2(8838, -12)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform39" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(6154, -358)
+position = Vector2(8061, -412)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform40" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(5731, -611)
+position = Vector2(7638, -665)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform41" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(5152, -864)
+position = Vector2(7059, -918)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform42" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(4619, -1218)
+position = Vector2(6526, -1272)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform43" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(4155, -1498)
+position = Vector2(6062, -1552)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform45" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(3447, -1874)
+position = Vector2(5354, -1928)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform46" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(3447, -1874)
+position = Vector2(5354, -1928)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform47" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(3061, -2076)
+position = Vector2(4968, -2130)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform48" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(2698, -2251)
+position = Vector2(4605, -2305)
 rotation = -0.0114209
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform49" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(2349, -2453)
+position = Vector2(4256, -2507)
 rotation = -0.567107
 width = 2
 one_way = true
 fall_time = 2.0
+respawn_delay = null
 
 [node name="Platform2" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(1216, -64)
+position = Vector2(3123, -118)
 width = 2
+respawn_delay = null
 
 [node name="Platform3" parent="Platforms" instance=ExtResource("4_gd51l")]
-position = Vector2(1472, 320)
+position = Vector2(3379, 266)
 width = 2
+respawn_delay = null
 
 [node name="Player" parent="." instance=ExtResource("2_7yl00")]
 position = Vector2(512, 576)
