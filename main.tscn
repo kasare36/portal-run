@@ -39,7 +39,7 @@ transform = Transform2D(10, 0, 0, 10, 0, 0)
 tint = Color(0.569993, 0.558956, 0.878091, 1)
 
 [node name="Dangerzone" parent="." instance=ExtResource("4_2mg6t")]
-position = Vector2(3179, 2968)
+position = Vector2(4152, 12244)
 scale = Vector2(1000, 1000)
 
 [node name="TileMap" parent="." instance=ExtResource("3_yfnmv")]
