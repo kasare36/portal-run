@@ -227,10 +227,19 @@ func reset():
 	coyote_timer = 0
 	jump_buffer_timer = 0
 
+var previous_lives = Global.lives
 
 func _on_lives_changed():
+	if Global.lives < previous_lives:
+		if $LifeLostSound:
+			$LifeLostSound.stop()
+			$LifeLostSound.play()
+
 	if Global.lives > 0:
 		global_position = checkpoint_position
+
+	previous_lives = Global.lives
+
 
 var checkpoint_position: Vector2
 func _on_checkpoint_body_entered(body):
