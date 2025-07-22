@@ -98,6 +98,7 @@ func _ready():
 		Global.lives_changed.connect(_on_lives_changed)
 
 	original_position = position
+	checkpoint_position = global_position
 	_set_speed(speed)
 	_set_sprite_frames(sprite_frames)
 
@@ -223,7 +224,7 @@ func reset():
 
 func _on_lives_changed():
 	if Global.lives > 0:
-		reset()
+		global_position = checkpoint_position
 
 var checkpoint_position: Vector2
 func _on_checkpoint_body_entered(body):

@@ -70,7 +70,19 @@ func _on_lives_changed():
 
 
 func set_lives(lives: int):
-	%Lives.offset_right = %Lives.offset_left + lives * %Lives.texture.get_width()
+	var container = get_node("Lives")  # your HBoxContainer node
+
+	# Clear existing hearts
+	for child in container.get_children():
+		child.queue_free()
+
+	# Add one heart per life
+	for i in range(lives):
+		var heart = TextureRect.new()
+		heart.texture = preload("res://components/player/heart.png")  # <-- Update this path to your heart image
+		heart.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		container.add_child(heart)
+
 
 
 func _on_game_ended(ending: Global.Endings):

@@ -75,3 +75,4 @@ func _on_game_start():
 	# Start the timer if it has been set up.
 	if timer != null:
 		timer.paused = false
+		
