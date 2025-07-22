@@ -71,6 +71,7 @@ var original_position: Vector2
 @onready var _initial_sprite_frames: SpriteFrames = %AnimatedSprite2D.sprite_frames
 @onready var _double_jump_particles: CPUParticles2D = %DoubleJumpParticles
 @onready var _portal_entry_sound: AudioStreamPlayer2D = $PortalEntrySound
+var default_speed := 620.0
 
 
 func _set_sprite_frames(new_sprite_frames):
@@ -258,10 +259,20 @@ func _on_checkpoint_body_entered(body):
 	if body == self:
 		checkpoint_position = global_position
 		print("Checkpoint reached at:", checkpoint_position)
-		
+
+		# Play sound
 		if $PortalEntrySound:
 			$PortalEntrySound.stop()
 			$PortalEntrySound.play()
+
+		# Toggle speed
+		if speed == default_speed:
+			speed = default_speed * 100
+		else:
+			speed = default_speed
+
+		_set_speed(speed)  # Make sure visuals update correctly
+
 
 
 func reset_player_state():

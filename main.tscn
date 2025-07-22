@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dhcpt1kt8cs0g"]
+[gd_scene load_steps=24 format=4 uid="uid://dhcpt1kt8cs0g"]
 
 [ext_resource type="PackedScene" uid="uid://8st4scqt06l8" path="res://components/player/player.tscn" id="2_7yl00"]
 [ext_resource type="PackedScene" uid="uid://jnrusvm3gric" path="res://spaces/background.tscn" id="2_tb5a2"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dfnn355cdooe2" path="res://components/platform/gradient2.png" id="17_cegan"]
 [ext_resource type="Texture2D" uid="uid://dk7ms7ukhf2ic" path="res://components/platform/gradient3.png" id="19_82xsv"]
 [ext_resource type="Texture2D" uid="uid://yg56tbb3gagl" path="res://components/platform/down.png" id="20_getpj"]
+[ext_resource type="Texture2D" uid="uid://bq2gb27s2hdwx" path="res://assets/tunnel1.svg" id="22_ryguw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82xsv"]
 size = Vector2(0.100963, 0.0218537)
@@ -1010,7 +1011,6 @@ script = ExtResource("15_d13ii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MakeshiftPortal/Portal3/Checkpoint4"]
 position = Vector2(-7.82464, 5.02622)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_82xsv")
 
 [node name="Portal4" type="Node2D" parent="MakeshiftPortal"]
@@ -1035,7 +1035,6 @@ script = ExtResource("15_d13ii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MakeshiftPortal/Portal4/Checkpoint3"]
 position = Vector2(-7.72368, 4.85139)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_82xsv")
 
 [node name="Backgrounds" type="Node2D" parent="."]
@@ -1053,25 +1052,6 @@ position = Vector2(10777, -4599)
 rotation = -3.14126
 scale = Vector2(1.85478, 3.94557)
 texture = ExtResource("15_yaehf")
-metadata/_edit_lock_ = true
-
-[node name="8" type="Sprite2D" parent="Backgrounds"]
-z_index = -200
-position = Vector2(13715, -4568)
-scale = Vector2(3, 7.85231)
-texture = ExtResource("16_074og")
-
-[node name="9" type="Sprite2D" parent="Backgrounds"]
-z_index = -200
-position = Vector2(16613, -4624)
-scale = Vector2(2.9768, 7.64)
-texture = ExtResource("16_074og")
-
-[node name="10" type="Sprite2D" parent="Backgrounds"]
-z_index = -200
-position = Vector2(19244, -4624)
-scale = Vector2(2.9768, 7.64)
-texture = ExtResource("16_074og")
 metadata/_edit_lock_ = true
 
 [node name="Gradient2" type="Sprite2D" parent="Backgrounds"]
@@ -1141,18 +1121,13 @@ theme_override_font_sizes/font_size = 100
 text = "Fall"
 uppercase = true
 
-[node name="Checkpoint2" type="Area2D" parent="."]
-position = Vector2(524.004, 409)
-scale = Vector2(19.8093, 22.88)
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint2"]
-position = Vector2(-0.505017, 0.917832)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_82xsv")
+[node name="Tunnel1" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(16354, -4303)
+scale = Vector2(8.17383, 12.8984)
+texture = ExtResource("22_ryguw")
 
 [connection signal="body_entered" from="MakeshiftPortal/Portal/Checkpoint5" to="Player" method="_on_checkpoint_body_entered"]
 [connection signal="body_entered" from="MakeshiftPortal/Portal2/Checkpoint" to="Player" method="_on_checkpoint_body_entered"]
 [connection signal="body_entered" from="MakeshiftPortal/Portal3/Checkpoint4" to="Player" method="_on_checkpoint_body_entered"]
 [connection signal="body_entered" from="MakeshiftPortal/Portal4/Checkpoint3" to="Player" method="_on_checkpoint_body_entered"]
-[connection signal="body_entered" from="Checkpoint2" to="Player" method="_on_checkpoint_body_entered"]
