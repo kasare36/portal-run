@@ -83,7 +83,6 @@ func _recreate_sprites():
 
 		_sprites.add_child(new_sprite)
 
-
 func _on_area_2d_body_entered(body):
 	if not body.is_in_group("players"):
 		return
@@ -102,10 +101,23 @@ func _fall():
 	respawn_timer.start(respawn_delay)
 
 
+func _fade_in():
+	for sprite in _sprites.get_children():
+		if sprite is Sprite2D:
+			sprite.modulate.a = 0.0  # Start invisible
+			var tween := create_tween()
+			tween.tween_property(
+				sprite, "modulate:a", 1.0, 0.75
+			)
+
 func _respawn():
 	print("🔁 Respawning platform")
+	
 	_rigid_body.freeze = true
 	_rigid_body.linear_velocity = Vector2.ZERO
 	_rigid_body.angular_velocity = 0
 	_rigid_body.rotation = 0
 	_rigid_body.global_position = start_global_position
+
+	_recreate_sprites()
+	_fade_in()
