@@ -75,6 +75,14 @@ func _ready():
 		Global.setup_timer(time_limit)
 
 	_set_lives(lives)
+	Global.game_ended.connect(_on_game_ended)
+	
+
+func _on_game_ended(ending):
+	if ending == Global.Endings.WIN:
+		if player:
+			player.play_win_sound()
+
 
 
 func _on_coin_collected():
@@ -104,3 +112,5 @@ func _check_win_conditions(flag: Flag):
 		return false
 
 	return true
+
+@onready var player = get_parent().get_node("Player") # Adjust path if needed

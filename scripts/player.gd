@@ -305,3 +305,7 @@ func set_checkpoint_position(pos: Vector2) -> void:
 	if _portal_entry_sound.playing:
 		_portal_entry_sound.stop()
 	_portal_entry_sound.play()
+
+func play_win_sound():
+	if $WinSound:
+		$WinSound.play()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://8st4scqt06l8"]
+[gd_scene load_steps=8 format=3 uid="uid://8st4scqt06l8"]
 
 [ext_resource type="Script" uid="uid://umb21eb2y1oj" path="res://scripts/player.gd" id="1_w3ms2"]
 [ext_resource type="SpriteFrames" uid="uid://ddef1cdsk5ya1" path="res://components/player/newPlayerSprite.tres" id="2_kfe3d"]
 [ext_resource type="AudioStream" uid="uid://c6vnfse0o7wmw" path="res://components/sound-efx/jump.mp3" id="3_ph1f6"]
 [ext_resource type="AudioStream" uid="uid://dhrbm4w3854vq" path="res://components/sound-efx/playerdeath.mp3" id="4_wa6cj"]
 [ext_resource type="AudioStream" uid="uid://ppkacr46ktem" path="res://components/sound-efx/portalentry.mp3" id="5_mpawu"]
+[ext_resource type="AudioStream" uid="uid://d0o5884mukeg7" path="res://components/sound-efx/win.mp3" id="6_pvtfm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kfe3d"]
 height = 59.2
@@ -52,3 +53,6 @@ stream = ExtResource("4_wa6cj")
 
 [node name="PortalEntrySound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_mpawu")
+
+[node name="WinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_pvtfm")
