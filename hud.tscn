@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://jt80gv02u4f2"]
+[gd_scene load_steps=16 format=3 uid="uid://jt80gv02u4f2"]
 
 [ext_resource type="Script" uid="uid://bi5370kgl6xcs" path="res://scripts/hud.gd" id="1_8msyy"]
 [ext_resource type="Texture2D" uid="uid://bwt5tfdwi6444" path="res://assets/input-prompts/keyboard_arrow_left.svg" id="2_btdwd"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://cwxk6km6rqwl3" path="res://assets/controls/flatDarkRight.png" id="6_u38dk"]
 [ext_resource type="Texture2D" uid="uid://cunoxrlkbl8f1" path="res://assets/input-prompts/steamdeck_button_a.svg" id="7_cae44"]
 [ext_resource type="Texture2D" uid="uid://vujn5y4v732w" path="res://assets/controls/flatDarkA.png" id="8_me7no"]
-[ext_resource type="Texture2D" uid="uid://bee3tkygni1u8" path="res://components/player/heart.png" id="11_615i1"]
 
 [sub_resource type="Theme" id="Theme_0yvta"]
 default_font_size = 64
@@ -164,15 +163,6 @@ offset_bottom = 128.0
 theme_override_font_sizes/font_size = 64
 text = "0"
 
-[node name="Lives" type="TextureRect" parent="."]
-unique_name_in_owner = true
-offset_left = 32.0
-offset_top = 202.0
-offset_right = 387.0
-offset_bottom = 514.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_615i1")
-
 [node name="MovePlayerLeft" type="TouchScreenButton" parent="."]
 modulate = Color(1, 1, 1, 0.74902)
 texture_filter = 1
@@ -205,3 +195,9 @@ texture_pressed = ExtResource("8_me7no")
 passby_press = true
 action = "player_1_jump"
 visibility_mode = 1
+
+[node name="Lives" type="HBoxContainer" parent="."]
+offset_left = 73.0
+offset_top = 227.0
+offset_right = 113.0
+offset_bottom = 267.0

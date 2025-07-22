@@ -98,6 +98,7 @@ func _ready():
 		Global.lives_changed.connect(_on_lives_changed)
 
 	original_position = position
+	checkpoint_position = global_position
 	_set_speed(speed)
 	_set_sprite_frames(sprite_frames)
 
@@ -223,4 +224,30 @@ func reset():
 
 func _on_lives_changed():
 	if Global.lives > 0:
-		reset()
+		global_position = checkpoint_position
+
+var checkpoint_position: Vector2
+func _on_checkpoint_body_entered(body):
+	if body == self:
+		checkpoint_position = global_position
+		print("Checkpoint reached at:", checkpoint_position)
+
+func reset_player_state():
+	velocity = Vector2.ZERO
+	$AnimatedSprite2D.play("idle")
+	# Add more reset logic if needed (like jump states, timers, etc.)
+
+
+
+func _input(event):
+	if event.is_action_pressed("reset_game"):  # Make sure "reset_game" is mapped to "R"
+		if checkpoint_position != Vector2.ZERO:
+			global_position = checkpoint_position
+			reset_player_state()
+			
+			
+			
+func _on_danger_zone_body_entered(body):
+	if body == self:
+		global_position = checkpoint_position
+		reset_player_state()
