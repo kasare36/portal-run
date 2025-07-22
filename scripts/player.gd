@@ -253,6 +253,10 @@ func _on_lives_changed():
 
 	previous_lives = Global.lives
 
+@onready var general_music = get_parent().get_node("BackgroundMusic")
+@onready var portal_music = get_parent().get_node("TunnelMusic")
+
+
 
 var checkpoint_position: Vector2
 func _on_checkpoint_body_entered(body):
@@ -260,7 +264,7 @@ func _on_checkpoint_body_entered(body):
 		checkpoint_position = global_position
 		print("Checkpoint reached at:", checkpoint_position)
 
-		# Play sound
+		# Play portal entry sound
 		if $PortalEntrySound:
 			$PortalEntrySound.stop()
 			$PortalEntrySound.play()
@@ -273,6 +277,36 @@ func _on_checkpoint_body_entered(body):
 
 		_set_speed(speed)  # Make sure visuals update correctly
 
+		# Toggle music when entering the portal
+		if not portal_music.playing:  # If portal music is not playing, start it
+			if general_music.playing:
+				general_music.stop()
+			portal_music.play()  # Switch to portal music
+		elif portal_music.playing:  # If portal music is already playing, stop it and play general music
+			portal_music.stop()
+			general_music.play()  # Switch back to general music
+
+
+
+		
+func _on_exit_portal():
+	# Stop portal music and play general music
+	if portal_music.playing:
+		portal_music.stop()
+	if not general_music.playing:
+		general_music.play()
+
+	# Reset speed to default when exiting the portal
+	speed = default_speed
+	_set_speed(speed)
+
+
+
+# Example of how you might handle portal exit (triggered by body_exited signal)
+# Called when the player exits the portal area
+func _on_portal_exit(body):
+	if body == self:
+		_on_exit_portal()  # Switch music and speed when the player exits the portal
 
 
 func reset_player_state():

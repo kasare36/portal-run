@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://dhcpt1kt8cs0g"]
+[gd_scene load_steps=26 format=4 uid="uid://dhcpt1kt8cs0g"]
 
 [ext_resource type="PackedScene" uid="uid://8st4scqt06l8" path="res://components/player/player.tscn" id="2_7yl00"]
 [ext_resource type="PackedScene" uid="uid://jnrusvm3gric" path="res://spaces/background.tscn" id="2_tb5a2"]
@@ -22,6 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://dk7ms7ukhf2ic" path="res://components/platform/gradient3.png" id="19_82xsv"]
 [ext_resource type="Texture2D" uid="uid://yg56tbb3gagl" path="res://components/platform/down.png" id="20_getpj"]
 [ext_resource type="Texture2D" uid="uid://bq2gb27s2hdwx" path="res://assets/tunnel1.svg" id="22_ryguw"]
+[ext_resource type="AudioStream" uid="uid://bppiuabbjg1up" path="res://components/platform/music.mp3" id="23_d13ii"]
+[ext_resource type="AudioStream" uid="uid://h6oqcoysvkpl" path="res://components/platform/tunnelmusic.mp3" id="24_1u8w0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82xsv"]
 size = Vector2(0.100963, 0.0218537)
@@ -1096,6 +1098,12 @@ scale = Vector2(5, 5)
 transform = Transform2D(5, 0, 0, 5, 22000, -2600)
 tint = Color(1, 1, 0, 1)
 
+[node name="Tunnel1" type="Sprite2D" parent="Backgrounds"]
+z_index = -5
+position = Vector2(16354, -4303)
+scale = Vector2(8.17383, 12.8984)
+texture = ExtResource("22_ryguw")
+
 [node name="Down" type="Sprite2D" parent="."]
 position = Vector2(65636, -6289)
 scale = Vector2(0.880859, 0.658203)
@@ -1121,11 +1129,14 @@ theme_override_font_sizes/font_size = 100
 text = "Fall"
 uppercase = true
 
-[node name="Tunnel1" type="Sprite2D" parent="."]
-z_index = -5
-position = Vector2(16354, -4303)
-scale = Vector2(8.17383, 12.8984)
-texture = ExtResource("22_ryguw")
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_d13ii")
+autoplay = true
+mix_target = 1
+playback_type = 1
+
+[node name="TunnelMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_1u8w0")
 
 [connection signal="body_entered" from="MakeshiftPortal/Portal/Checkpoint5" to="Player" method="_on_checkpoint_body_entered"]
 [connection signal="body_entered" from="MakeshiftPortal/Portal2/Checkpoint" to="Player" method="_on_checkpoint_body_entered"]
