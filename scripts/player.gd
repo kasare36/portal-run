@@ -229,11 +229,17 @@ func reset():
 
 var previous_lives = Global.lives
 
+func start_screen_shake(duration: float, strength: float):
+	shake_timer = duration
+	shake_strength = strength
+
+
 func _on_lives_changed():
 	if Global.lives < previous_lives:
 		if $LifeLostSound:
 			$LifeLostSound.stop()
 			$LifeLostSound.play()
+		start_screen_shake(0.25, 6.0)  # Shake for 0.25s at strength 6
 
 	if Global.lives > 0:
 		global_position = checkpoint_position
@@ -266,3 +272,19 @@ func _on_danger_zone_body_entered(body):
 	if body == self:
 		global_position = checkpoint_position
 		reset_player_state()
+
+var shake_timer = 0.0
+var shake_strength = 0.0
+
+@onready var _camera := $Camera2D
+
+func _process(delta):
+	if shake_timer > 0:
+		shake_timer -= delta
+		var shake_offset = Vector2(
+			randf_range(-1, 1),
+			randf_range(-1, 1)
+		) * shake_strength
+		_camera.offset = shake_offset
+	else:
+		_camera.offset = Vector2.ZERO
