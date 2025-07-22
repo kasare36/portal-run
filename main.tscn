@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://yg56tbb3gagl" path="res://components/platform/down.png" id="20_getpj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82xsv"]
-size = Vector2(6.76416, 9.92134)
+size = Vector2(0.100963, 0.0218537)
 
 [node name="Main" type="Node2D"]
 
@@ -968,6 +968,15 @@ position = Vector2(11607, -4725)
 scale = Vector2(2.66376, 3.23148)
 texture = ExtResource("16_d13ii")
 
+[node name="Checkpoint5" type="Area2D" parent="MakeshiftPortal/Portal"]
+position = Vector2(20682, -4838)
+scale = Vector2(19.8093, 22.88)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MakeshiftPortal/Portal/Checkpoint5"]
+position = Vector2(-459.582, 4.72028)
+shape = SubResource("RectangleShape2D_82xsv")
+
 [node name="Portal2" type="Node2D" parent="MakeshiftPortal"]
 position = Vector2(9093, -10)
 
@@ -981,6 +990,15 @@ texture = ExtResource("15_ryguw")
 position = Vector2(11607, -4725)
 scale = Vector2(2.66376, 3.23148)
 texture = ExtResource("16_d13ii")
+
+[node name="Checkpoint" type="Area2D" parent="MakeshiftPortal/Portal2"]
+position = Vector2(11589, -4828)
+scale = Vector2(19.8093, 22.88)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MakeshiftPortal/Portal2/Checkpoint"]
+position = Vector2(-0.605776, 4.54545)
+shape = SubResource("RectangleShape2D_82xsv")
 
 [node name="Portal3" type="Node2D" parent="MakeshiftPortal"]
 position = Vector2(43345, -1780)
@@ -996,6 +1014,16 @@ position = Vector2(11607, -4725)
 scale = Vector2(2.66376, 3.23148)
 texture = ExtResource("16_d13ii")
 
+[node name="Checkpoint4" type="Area2D" parent="MakeshiftPortal/Portal3"]
+position = Vector2(11729, -4846)
+scale = Vector2(19.8093, 22.88)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MakeshiftPortal/Portal3/Checkpoint4"]
+position = Vector2(-7.82464, 5.02622)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_82xsv")
+
 [node name="Portal4" type="Node2D" parent="MakeshiftPortal"]
 position = Vector2(52348, -1785)
 
@@ -1009,6 +1037,16 @@ texture = ExtResource("15_ryguw")
 position = Vector2(11607, -4725)
 scale = Vector2(2.66376, 3.23148)
 texture = ExtResource("16_d13ii")
+
+[node name="Checkpoint3" type="Area2D" parent="MakeshiftPortal/Portal4"]
+position = Vector2(11728, -4842)
+scale = Vector2(19.8093, 22.88)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MakeshiftPortal/Portal4/Checkpoint3"]
+position = Vector2(-7.72368, 4.85139)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_82xsv")
 
 [node name="Backgrounds" type="Node2D" parent="."]
 
@@ -1106,54 +1144,18 @@ theme_override_font_sizes/font_size = 100
 text = "Fall"
 uppercase = true
 
-[node name="Checkpoint" type="Area2D" parent="."]
-position = Vector2(20682, -4838)
-scale = Vector2(19.8093, 22.88)
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint"]
-position = Vector2(-0.605776, 4.06469)
-shape = SubResource("RectangleShape2D_82xsv")
-
-[node name="Checkpoint5" type="Area2D" parent="."]
-position = Vector2(20682, -4838)
-scale = Vector2(19.8093, 22.88)
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint5"]
-position = Vector2(-459.734, 4.72028)
-shape = SubResource("RectangleShape2D_82xsv")
-
-[node name="Checkpoint3" type="Area2D" parent="."]
-position = Vector2(64076, -6627)
-scale = Vector2(19.8093, 22.88)
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint3"]
-position = Vector2(-7.72388, 5.00436)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_82xsv")
-
-[node name="Checkpoint4" type="Area2D" parent="."]
-position = Vector2(55074, -6626)
-scale = Vector2(19.8093, 22.88)
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint4"]
-position = Vector2(-7.72388, 5.00436)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_82xsv")
-
 [node name="Checkpoint2" type="Area2D" parent="."]
 position = Vector2(524.004, 409)
 scale = Vector2(19.8093, 22.88)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint2"]
+position = Vector2(-0.505017, 0.917832)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_82xsv")
 
-[connection signal="body_entered" from="Checkpoint" to="Player" method="_on_checkpoint_body_entered"]
-[connection signal="body_entered" from="Checkpoint5" to="Player" method="_on_checkpoint_body_entered"]
-[connection signal="body_entered" from="Checkpoint3" to="Player" method="_on_checkpoint_body_entered"]
-[connection signal="body_entered" from="Checkpoint4" to="Player" method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="MakeshiftPortal/Portal/Checkpoint5" to="Player" method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="MakeshiftPortal/Portal2/Checkpoint" to="Player" method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="MakeshiftPortal/Portal3/Checkpoint4" to="Player" method="_on_checkpoint_body_entered"]
+[connection signal="body_entered" from="MakeshiftPortal/Portal4/Checkpoint3" to="Player" method="_on_checkpoint_body_entered"]
 [connection signal="body_entered" from="Checkpoint2" to="Player" method="_on_checkpoint_body_entered"]
