@@ -10,7 +10,7 @@ const SPRITE: Texture2D = preload("res://assets/tiles-a.png")
 	set = _set_one_way
 
 @export var fall_time: float = -1
-@export var respawn_delay: float = 2.5
+@export var respawn_delay: float = 10
 
 var fall_timer: Timer
 var respawn_timer: Timer
