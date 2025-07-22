@@ -70,6 +70,7 @@ var original_position: Vector2
 @onready var _sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var _initial_sprite_frames: SpriteFrames = %AnimatedSprite2D.sprite_frames
 @onready var _double_jump_particles: CPUParticles2D = %DoubleJumpParticles
+@onready var _portal_entry_sound: AudioStreamPlayer2D = $PortalEntrySound
 
 
 func _set_sprite_frames(new_sprite_frames):
@@ -96,11 +97,16 @@ func _ready():
 	else:
 		Global.gravity_changed.connect(_on_gravity_changed)
 		Global.lives_changed.connect(_on_lives_changed)
+		
+		# Connect to Area2D's signals for checkpoints:
+		for checkpoint in get_tree().get_nodes_in_group("checkpoints"):
+			checkpoint.connect("body_entered", Callable(self, "_on_checkpoint_body_entered"))
 
-	original_position = position
-	checkpoint_position = global_position
-	_set_speed(speed)
-	_set_sprite_frames(sprite_frames)
+		original_position = position
+		checkpoint_position = global_position
+		_set_speed(speed)
+		_set_sprite_frames(sprite_frames)
+
 
 
 func _on_gravity_changed(new_gravity):
@@ -252,6 +258,11 @@ func _on_checkpoint_body_entered(body):
 	if body == self:
 		checkpoint_position = global_position
 		print("Checkpoint reached at:", checkpoint_position)
+		
+		if $PortalEntrySound:
+			$PortalEntrySound.stop()
+			$PortalEntrySound.play()
+
 
 func reset_player_state():
 	velocity = Vector2.ZERO
@@ -288,3 +299,9 @@ func _process(delta):
 		_camera.offset = shake_offset
 	else:
 		_camera.offset = Vector2.ZERO
+		
+func set_checkpoint_position(pos: Vector2) -> void:
+	checkpoint_position = pos
+	if _portal_entry_sound.playing:
+		_portal_entry_sound.stop()
+	_portal_entry_sound.play()

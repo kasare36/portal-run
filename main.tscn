@@ -12,8 +12,8 @@
 [ext_resource type="SpriteFrames" uid="uid://ddef1cdsk5ya1" path="res://components/player/newPlayerSprite.tres" id="9_82xsv"]
 [ext_resource type="PackedScene" uid="uid://dk0xon0k7ga23" path="res://components/enemy/enemy.tscn" id="9_l6smt"]
 [ext_resource type="PackedScene" uid="uid://beuisy5yrw0bq" path="res://components/flag/flag.tscn" id="12_dkbog"]
-[ext_resource type="Script" uid="uid://boqbxvbja884q" path="res://scripts/multiplayer_camera.gd" id="13_0d2mj"]
 [ext_resource type="Texture2D" uid="uid://byh6jyttgaxb2" path="res://spaces/1background.png" id="14_w48qg"]
+[ext_resource type="Script" uid="uid://w0awppcrwrb5" path="res://scripts/checkpoint.gd" id="15_d13ii"]
 [ext_resource type="Texture2D" uid="uid://cp2jo8bicdlir" path="res://components/platform/portal1.png" id="15_ryguw"]
 [ext_resource type="Texture2D" uid="uid://d0ogd7q5gouqj" path="res://components/platform/gradient.png" id="15_yaehf"]
 [ext_resource type="Texture2D" uid="uid://cglwxmguhr8gq" path="res://components/platform/8.png" id="16_074og"]
@@ -786,20 +786,6 @@ z_index = -100
 position = Vector2(83358, -7729)
 scale = Vector2(1.36, 1.2)
 
-[node name="MultiplayerCamera" type="Camera2D" parent="."]
-position = Vector2(526, 407)
-enabled = false
-limit_left = 0
-limit_bottom = 1080
-position_smoothing_enabled = true
-script = ExtResource("13_0d2mj")
-
-[node name="Background2" parent="." instance=ExtResource("2_tb5a2")]
-offset = Vector2(22000, -2600)
-scale = Vector2(5, 5)
-transform = Transform2D(5, 0, 0, 5, 22000, -2600)
-tint = Color(1, 1, 0, 1)
-
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Enemy121" parent="Enemies" instance=ExtResource("9_l6smt")]
@@ -972,6 +958,7 @@ texture = ExtResource("16_d13ii")
 position = Vector2(20682, -4838)
 scale = Vector2(19.8093, 22.88)
 collision_layer = 2
+script = ExtResource("15_d13ii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MakeshiftPortal/Portal/Checkpoint5"]
 position = Vector2(-459.582, 4.72028)
@@ -995,6 +982,7 @@ texture = ExtResource("16_d13ii")
 position = Vector2(11589, -4828)
 scale = Vector2(19.8093, 22.88)
 collision_layer = 2
+script = ExtResource("15_d13ii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MakeshiftPortal/Portal2/Checkpoint"]
 position = Vector2(-0.605776, 4.54545)
@@ -1018,6 +1006,7 @@ texture = ExtResource("16_d13ii")
 position = Vector2(11729, -4846)
 scale = Vector2(19.8093, 22.88)
 collision_layer = 2
+script = ExtResource("15_d13ii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MakeshiftPortal/Portal3/Checkpoint4"]
 position = Vector2(-7.82464, 5.02622)
@@ -1042,6 +1031,7 @@ texture = ExtResource("16_d13ii")
 position = Vector2(11728, -4842)
 scale = Vector2(19.8093, 22.88)
 collision_layer = 2
+script = ExtResource("15_d13ii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MakeshiftPortal/Portal4/Checkpoint3"]
 position = Vector2(-7.72368, 4.85139)
@@ -1107,32 +1097,39 @@ scale = Vector2(8.69, 11.1379)
 texture = ExtResource("16_074og")
 metadata/_edit_lock_ = true
 
-[node name="Background3" parent="." instance=ExtResource("2_tb5a2")]
+[node name="Background3" parent="Backgrounds" instance=ExtResource("2_tb5a2")]
 offset = Vector2(52000, -2600)
 scale = Vector2(5, 5)
 transform = Transform2D(5, 0, 0, 5, 52000, -2600)
 tint = Color(1, 0, 0, 1)
 
-[node name="Gradient3" type="Sprite2D" parent="."]
+[node name="Gradient4" type="Sprite2D" parent="Backgrounds"]
 z_index = -200
 position = Vector2(64430, -6906)
 scale = Vector2(0.895625, 5.7139)
 texture = ExtResource("19_82xsv")
 metadata/_edit_lock_ = true
 
+[node name="Background2" parent="Backgrounds" instance=ExtResource("2_tb5a2")]
+offset = Vector2(22000, -2600)
+scale = Vector2(5, 5)
+transform = Transform2D(5, 0, 0, 5, 22000, -2600)
+tint = Color(1, 1, 0, 1)
+
 [node name="Down" type="Sprite2D" parent="."]
 position = Vector2(65636, -6289)
 scale = Vector2(0.880859, 0.658203)
 texture = ExtResource("20_getpj")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="Down"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 292.0
-offset_right = 332.0
-offset_bottom = 40.0
+offset_left = -74182.1
+offset_top = 9554.8
+offset_right = -74142.1
+offset_bottom = 9594.8
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Label" type="Label" parent="Down/Control"]
 layout_mode = 0
 offset_left = 65536.0
 offset_top = -6599.0
