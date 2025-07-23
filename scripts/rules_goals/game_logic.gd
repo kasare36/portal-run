@@ -79,15 +79,18 @@ func _ready():
 	
 
 func _on_game_ended(ending):
-	# Stop the background music if player loses
-	if ending == Global.Endings.LOSE:
-		var music = get_tree().root.get_node("Main/BackgroundMusic") # Adjust path if needed
-		if music:
-			music.stop()
+	var background_music = get_tree().root.get_node("Main/BackgroundMusic")
+	var tunnel_music = get_tree().root.get_node("Main/TunnelMusic")
+
+	if background_music:
+		background_music.stop()
+	if tunnel_music:
+		tunnel_music.stop()
 
 	if ending == Global.Endings.WIN:
 		if player:
 			player.play_win_sound()
+
 
 
 
