@@ -104,6 +104,14 @@ text = "Explore, collect coins, use portals, and beat the clock!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label3" type="Label" parent="Start"]
+z_index = 5
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Press R to reset to last portal!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="WinEnding" type="Label" parent="."]
 unique_name_in_owner = true
 visible = false
