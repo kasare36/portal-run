@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b768xl1u41umc"
-path="res://.godot/imported/background3.png-329cf89d3a6154e1a502cbc9ad1c1bb1.ctex"
+uid="uid://coiedg13l2fbq"
+path="res://.godot/imported/goldsky.png-6578e0acf8dc00cd601c8f9bd4ca30ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background3.png"
-dest_files=["res://.godot/imported/background3.png-329cf89d3a6154e1a502cbc9ad1c1bb1.ctex"]
+source_file="res://assets/goldsky.png"
+dest_files=["res://.godot/imported/goldsky.png-6578e0acf8dc00cd601c8f9bd4ca30ef.ctex"]
 
 [params]
 
