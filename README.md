@@ -26,10 +26,6 @@ Open portal-run in Godot.
 Press F5 or click Play.
 
 
-
-##📄 License
-No license applied.
-
 ---
 
 # Moddable Platformer
